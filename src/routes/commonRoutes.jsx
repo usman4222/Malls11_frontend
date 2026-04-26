@@ -8,10 +8,10 @@ import Blogs from '../pages/site/blog/blogs';
 import Projects from '../pages/site/Projects';
 import Freelancers from '../pages/site/Freelancers';
 import ProjectDetail from '../pages/site/ProjectDetail';
-import ProtectedRoute from './protectedRoutes/protectedRoute';
 import FreelancerProfile from '../pages/site/FreelancerProfile';
 import FreelancerGigDetails from '../pages/site/FreelancerGigDetails';
 import ProviderRegistrationForm from '../pages/site/ProviderRegistrationForm';
+import ProtectedRoute from "./protectedRoutes/ProtectedRoute"
 
 const siteRoutes = () => ([
     <Route path="/" element={<LandingPage />} key="landing" />,
