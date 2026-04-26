@@ -3,7 +3,7 @@ import { CLIENT_VERIFICATION_FAIL, CLIENT_VERIFICATION_REQUEST, CLIENT_VERIFICAT
 import axiosInstance from "../../utils/axiosInstance";
 
 
-let baseurl = "http://localhost:3000";
+let baseurl = "http://145.223.118.108:3000";
 
 export const createUserProfile = (profileData, token) => async (dispatch, getState) => {
     try {
@@ -75,18 +75,18 @@ export const getMyProfile = () => async (dispatch) => {
 
 
 export const getUserProfile = (id) => async (dispatch) => {
-  try {
-    dispatch(GET_USER_PROFILE_REQUEST());
+    try {
+        dispatch(GET_USER_PROFILE_REQUEST());
 
-    const res = await axiosInstance.get(`/profile/get-user-profile/${id}`);
+        const res = await axiosInstance.get(`/profile/get-user-profile/${id}`);
 
-    dispatch(GET_USER_PROFILE_SUCCESS(res.data.user));
+        dispatch(GET_USER_PROFILE_SUCCESS(res.data.user));
 
-    return res.data.user;
-  } catch (error) {
-    dispatch(GET_USER_PROFILE_FAIL(error.response?.data?.message || error.message));
-    throw error;
-  }
+        return res.data.user;
+    } catch (error) {
+        dispatch(GET_USER_PROFILE_FAIL(error.response?.data?.message || error.message));
+        throw error;
+    }
 };
 
 
