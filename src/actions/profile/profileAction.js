@@ -3,7 +3,7 @@ import { CLIENT_VERIFICATION_FAIL, CLIENT_VERIFICATION_REQUEST, CLIENT_VERIFICAT
 import axiosInstance from "../../utils/axiosInstance";
 
 
-let baseurl = "/";
+let baseurl = "/api";
 
 export const createUserProfile = (profileData, token) => async (dispatch, getState) => {
     try {
